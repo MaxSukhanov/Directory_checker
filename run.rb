@@ -1,0 +1,3 @@
+require_relative "usr_interaction"
+
+DirectoryCheckerApp.run
