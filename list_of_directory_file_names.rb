@@ -4,10 +4,11 @@ class ListOfDirectoryFileNames
   end
 
   def files_list
-      Dir.chdir(@wdir) do
-        Dir.glob("*")
-      end
+    Dir.chdir(@wdir) do
+      Dir.glob("*")
+    end
   end
 end
+
 
      
