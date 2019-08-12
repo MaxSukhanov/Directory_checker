@@ -10,7 +10,7 @@ class DirectoryCheckerApp
     puts "Hi there. Would you like to get the list of analysed directory files? (y or any key to skip)"
     lst = gets.chomp
       if lst == "y"
-        files = ListOfDirectoryFileNames.new
+        files = ListOfDirectoryFileNames.new(ENV["WORKING_FOLDER"])
         list = files.files_list
         puts "Here is the list of analyzed directory files:"
         puts list

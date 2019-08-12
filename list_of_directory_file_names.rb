@@ -1,6 +1,6 @@
 class ListOfDirectoryFileNames
-  def initialize
-    @wdir = ENV["WORKING_FOLDER"]
+  def initialize(working_folder)
+    @wdir = working_folder
   end
 
   def files_list
