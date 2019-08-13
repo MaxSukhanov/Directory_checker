@@ -15,9 +15,9 @@ class MatchingFileNamesAndDigests
   end
 
   def build_digests
-    list = ListOfDirectoryFileNames.new
-    files = list.files_list
-    files.each do |file_name|
+    dir_content = ListOfDirectoryFileNames.new(@wdir)
+    f_list = dir_content.files_list
+    f_list.each do |file_name|
       file_digest(file_name).tap do |digest|
         digests[digest] ||= []
         digests[digest] << file_name
